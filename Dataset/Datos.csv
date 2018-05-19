@@ -1,0 +1,31 @@
+referencia,categoria,nombre,descripcion,talla,color,precio,material,cuidados
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,S,Rojo,45000,Algodon,Ninguno
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,S,Rojo,45000,Algodon,Ninguno
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,S,Azul,45000,Algodon,Ninguno
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,S,Verde,45000,Algodon,Ninguno
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,M,Rojo,45000,Algodon,Ninguno
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,M,Rojo,45000,Algodon,Ninguno
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,M,Azul,45000,Algodon,Ninguno
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,M,Verde,45000,Algodon,Ninguno
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,L,Rojo,45000,Algodon,Ninguno
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,L,Rojo,45000,Algodon,Ninguno
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,L,Azul,45000,Algodon,Ninguno
+C001,Camiseta,Camiseta Oakley,Camiseta Oakley importada,L,Verde,45000,Algodon,Ninguno
+C002,Camiseta,Camiseta Nautica,Camiseta Nautica importada,S,Negro,56000,Poliester,Lavar en suave
+C002,Camiseta,Camiseta Nautica,Camiseta Nautica importada,S,Rojo,56000,Poliester,Lavar en suave
+C002,Camiseta,Camiseta Nautica,Camiseta Nautica importada,S,Amarillo,56000,Poliester,Lavar en suave
+C002,Camiseta,Camiseta Nautica,Camiseta Nautica importada,M,Negro,56000,Poliester,Lavar en suave
+C002,Camiseta,Camiseta Nautica,Camiseta Nautica importada,M,Rojo,56000,Poliester,Lavar en suave
+C002,Camiseta,Camiseta Nautica,Camiseta Nautica importada,M,Amarillo,56000,Poliester,Lavar en suave
+C002,Camiseta,Camiseta Nautica,Camiseta Nautica importada,L,Negro,56000,Poliester,Lavar en suave
+C002,Camiseta,Camiseta Nautica,Camiseta Nautica importada,L,Rojo,56000,Poliester,Lavar en suave
+C002,Camiseta,Camiseta Nautica,Camiseta Nautica importada,L,Amarillo,56000,Poliester,Lavar en suave
+P003,Pantalon,Pantalon Diesel,Pantalon Diesel vaquero,32,Beige,128000,Jean,Ninguno
+P003,Pantalon,Pantalon Diesel,Pantalon Diesel vaquero,34,Beige,128000,Jean,Ninguno
+P003,Pantalon,Pantalon Diesel,Pantalon Diesel vaquero,36,Beige,128000,Jean,Ninguno
+P004,Pantalon,Pantalon Patprimo,Pantalon Patprimo clasico,34,Negro,115000,Drill,Lavar en suave
+P004,Pantalon,Pantalon Patprimo,Pantalon Patprimo clasico,36,Negro,115000,Drill,Lavar en suave
+G005,Gorra,Gorra New Era,Gorra New Era plana,S,Gris,25000,Algodon,Ninguno
+G005,Gorra,Gorra New Era,Gorra New Era plana,M,Gris,25000,Algodon,Ninguno
+G005,Gorra,Gorra Fox,Gorra Fox plana,M,Gris,28000,Algodon,Ninguno
+G005,Gorra,Gorra Fox,Gorra Fox plana,L,Gris,28000,Algodon,Ninguno

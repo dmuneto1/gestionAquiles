@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title >AQUILES</title>
+    <link href="./menu.css" rel="stylesheet" type="text/css">
+
+    <link href="./bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" >
+    <link href="../../assets/js/ie-emulation-modes-warning.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+   
+
+      <script type="text/javascript">
+          var int=self.setInterval("refrescar()",30000)
+          function refrescar() {
+              $.post("/refrescar",{}, function(code){
+                      document.location.href = "/menu";
+              });
+              location.reload(true);
+          }
+      </script>
+
+    <script>
+
+      $(document).ready(function(){
+        $("#irpredecir").click(function(){                    
+          document.location.href = "/predecir";                                    
+        });
+        $("#irpredecir2").click(function(){                    
+          document.location.href = "/predecirEnvio";                                    
+        });
+
+        
+      });
+
+    </script>
+
+<!-- NAVBAR
+================================================== -->
+  <body onload="initialize();setTimeout('refrescar()', 2000);">
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="left" >
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id="rec" >Aquiles</a>
+              </div>
+            </div>
+            <div class="left">
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                  <li><a class="bottom" id="irpredecir">Predecir precio producto</a></li>
+
+                  <li><a class="bottom" id="irpredecir2">Predecir precio envío</a></li>
+                </ul>
+              </div>
+            </div>
+            <!--
+            <div class="right">
+                <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cuenta<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><input type="button"  class="btn btn-link" id="cambiar" value="Cambiar contraseña"></li>
+                      <li><input type="button"  class="btn btn-link" id="cerrar" value="Cerrar sesión"></li>
+                    </ul>
+                  </li>
+                </ul>
+            </div>-->
+          </div>
+        </nav>
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      
+        <div class="item active">
+            <div class="container">
+            <div class="carousel-caption">
+              <h1>SISTEMA CENTRAL DE AQUILES</h1>
+              <h3 style="color:white;">Bienvenido al sistema de gestión de Aquiles  </h3>
+            
+            </div>
+          </div>
+        </div>
+       
+      
+      
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <a href="" target="_blank" role="button" ><span class="glyphicon glyphicon-signal"></span> </a>
+          <h2>Estadísticas</h2>
+          <p>Acá se puede visualizar las estadísticas básicas de las ventas realizadas</p>
+          
+          <!--<p><a  class="btn btn-default" href="https://dataplatform.ibm.com/dashboards/ce339318-7588-4d09-93de-0b836f7a4f3e/view/773cf63611b46c9f09c1c8e407cd2c067c37715cb3bb8a0b86d17b4959322597f36a4592c87d490f8b120c6af1ee1b5a9a" target="_blank" role="button">Ir ahora &raquo;</a></p>-->
+
+          <form target="_blank" action="https://dataplatform.ibm.com/dashboards/ce339318-7588-4d09-93de-0b836f7a4f3e/view/773cf63611b46c9f09c1c8e407cd2c067c37715cb3bb8a0b86d17b4959322597f36a4592c87d490f8b120c6af1ee1b5a9a">
+            <input class="btn btn-default"   target="_blank"  type="submit" name="Predecir" value="Ir ahora &raquo;">
+          </form>
+        
+
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <a href="/predecir"   role="button"><span class="glyphicon glyphicon-usd"> </span> </a>
+          <h2>Predicción de precio de producto</h2>
+          <p>Acá se pueden realizar las predicciones del costo de los productos.</p>
+          <p><a class="btn btn-default" class="btn btn-default" href="/predecir"   role="button">Ir ahora &raquo;</a></p>
+        </div>
+        
+        <div class="col-lg-4">
+            <a href="/predecirEnvio"  role="button"><span class="glyphicon glyphicon-plane"> </span> </a>
+          <h2>Predicción de precio en envío</h2>
+          <p>Aca se pueden realizar as predicciones del costo del envío de un producto.</p>
+          <p><a class="btn btn-default" class="btn btn-default" href="/predecirEnvio"  role="button">Ir ahora &raquo;</a></p>
+        </div>
+    </div><!-- /.container -->
+  </div>
+  </body>
+</html>
