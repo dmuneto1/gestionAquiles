@@ -2,9 +2,10 @@
   "name": "aquilesweb",
   "version": "1.0.0",
   "description": "Esta es una plataforma para la gestion de aquiles",
-  "main": "index.js",
+  "main": "app.js",
+  "start":"node app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "start" : "node app.js" 
   },
   "author": "Dillan Muñeton- Laura Mejia- Daniel Rendon",
   "license": "ISC",

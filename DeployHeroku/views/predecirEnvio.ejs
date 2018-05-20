@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>AQUILES</title>
+
+    <!-- Bootstrap core CSS -->
+      <link href="./bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <link href="../../assets/css/ie10-viewport-bug-workaround.css" >
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+     <script src="./src/jquery.bootstrap-touchspin.js"></script>
+
+      <script>
+              $(document).ready(function(){
+                $("#predecir").click(function(){
+                    precio=$("#precio").val();
+                    pago=$("#medioPago").val();
+                    ciudad=$("#ciudad").val();
+                    if (precio!="" ){
+                       $.post("/predecirEnvio",{precio:precio, medioPago: pago, ciudad:ciudad}, function(data){
+                            alert("El precio más acertado para este envío es: \n" +data.prediccion+"COP")
+                    });
+                    }else{
+                      alert("Debe completar el campo precio.");
+
+                    }
+
+                   
+                            
+                });
+              });
+
+
+              
+            
+        </script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="./programarHora.css" rel="stylesheet">
+    <link href="./src/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" media="all">
+      <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./src/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+  <div class="navbar-wrapper">
+      <div class="container">
+          <nav class="navbar navbar-inverse navbar-static-top">
+              <div class="container">
+                  <div class="left">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="/" >Aquiles</a>
+                  </div>
+                  </div>
+                  <div class="left">
+                  <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+
+                          <li><a href="/" >Menú</a></li>
+             
+                      </ul>
+                  </div>
+                  </div>
+                  <!--<div class="right">
+                      <ul class="nav navbar-nav">
+                          <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cuenta<span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><input type="button"  class="btn btn-link" id="cambiar" value="Cambiar contraseña"></li>
+                                  <li><input type="button"  class="btn btn-link" id="cerrar" value="Cerrar sesión"></li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>-->
+              </div>
+          </nav>
+
+      </div>
+  </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+
+        <div class="item active">
+            <div class="container">
+            <div class="carousel-caption">
+              <h1>Predecir precio de envío:</h1>
+              &nbsp
+              <h4 style="color:gold;">Ingrese los siguientes datos y luego dele click en predecir para calcular el costo de envío de un producto:</h4>
+              
+              <div class="center-block">
+
+                
+                <p>Precio del producto a enviar</p>
+                <input id="precio" class="form-control" type="number" placeholder="Precio en número, sin puntos ni comas. (COP)">
+                
+                <br>
+                <p>Forma de pago del producto</p>  
+                <select id="medioPago" class="form-control">
+                  <option>Contraentrega</option>
+                  <option>Consignacion</option>
+                </select>
+                <br>
+                <p>Ciudad donde se hará el envío</p>
+                <select id="ciudad" class="form-control">
+                  <option>Medellin</option>
+                  <option>Cali</option>
+                  <option>Pereira</option>
+                  <option>Sabaneta</option>
+                  <option>Bello</option>
+                  <option>Bogota</option>
+
+                </select>
+                 
+               <br>   
+             <p><button id="predecir"  class="btn btn-lg btn-primary" role="button">Predecir </button></p>
+            </div>
+            </div>
+             </div>
+        </div>
+
+        
+
+    </div><!-- /.carousel -->
+
+
+
+
+
+  </body>
+</html>

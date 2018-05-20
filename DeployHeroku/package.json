@@ -1,0 +1,19 @@
+{
+  "name": "aquilesweb",
+  "version": "1.0.0",
+  "description": "Esta es una plataforma para la gestion de aquiles",
+  "main": "app.js",
+  "start":"node app.js",
+  "scripts": {
+     "start" : "node app.js" 
+  },
+  "author": "Dillan Muñeton- Laura Mejia- Daniel Rendon",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.8.1",
+    "express": "^4.15.2",
+    "bcryptjs": "2.4.3",
+    "ejs" : "2.5.6"
+  }
+}
+
